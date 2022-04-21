@@ -1,27 +1,60 @@
 import React, { Component } from "react";
 
 import PortfolioItem from "./portfolio-item";
+// import BioTextNodes from "./bio-text-node";
 
 export default class PortfolioContainer extends Component {
     constructor() {
         super();
 
+        this.state = {
+            pageTitle: "Projects",
+            data: [
+                { title: "Python BlackJack Game" },
+                { title: "Javascript Choices Game" },
+                { title: "Author Website" },
+                { title: "DevFries Website" }
+            ]
+        };
     }
 
     portfolioItems() {
-        const data = ["Python BlackJack Game", "Javascript Choices Game", "Author Website", "DevFries Website"];
 
-        return data.map(item => {
-            return <h2>{item}</h2>;
+        return this.state.data.map(item => {
+            return <PortfolioItem item={item.title} url={"github.com"} />;
         });
     }
     render() {
         return (
             <div>
-                <h2>Projects</h2>
+                <h2>{this.state.pageTitle.data}</h2>
 
                 {this.portfolioItems()}
             </div>
         );
     }
 }
+
+// export class BioTextNode extends Component {
+//     constructor() {
+//         super();
+
+//     }
+
+//     bioTextNodes() {
+//         const data = ["Profile", "Experience", "Skills", "Activities"];
+
+//         return data.map(node => {
+//             return <BioTextNodes node={node} />;
+//         });
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <h2>Developer Bio</h2>
+
+//                 {this.bioTextNodes()}
+//             </div>
+//         );
+//     }
+// }

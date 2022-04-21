@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from "moment";
 
 import PortfolioContainer from './portfolio/portofolio-container';
+//  , { BioTextNode }
 
 export default class App extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class App extends Component {
         </div>
         <div>
         <PortfolioContainer />
+        {/* <BioTextNode /> */}
         </div>
       </div>
     );
