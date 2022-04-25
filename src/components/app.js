@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import moment from "moment";
 
 import PortfolioContainer from './portfolio/portofolio-container';
+import NavigationContainer from './navigation/navigation-container';
 //  , { BioTextNode }
 
 export default class App extends Component {
   render() {
     return (
       <div className="app">
+        <div>
+          <NavigationContainer />
+        </div>
         <div>
           <img src="/assets/images/developer-photo.jpg" alt="profile-photo" width="400"></img>
         </div>
