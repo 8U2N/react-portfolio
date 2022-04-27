@@ -20,15 +20,16 @@ export default class App extends Component {
       <div className="app">
         <Router>
           <div>
-            <div>
-              <img src="/assets/images/developer-photo.jpg" alt="profile-photo" width="400"></img>
-            </div>
-            <div className="heading">
-              <h1>&#9876; <em> Tyler Burnworth </em>  &#9876;</h1>
-              <h2>Junior Full Stack Developer</h2>
-              <h3>&#128368; {moment().format('MMMM Do YYYY, h:mm:ss a')}</h3>
-            </div>
             <NavigationContainer />
+            <div className="heading">
+              <div className="bio-subheading">
+                <h2>Junior Full Stack Developer</h2>
+                <div className="bio-image">
+                  <img src="/assets/images/developer-photo.jpg" alt="profile-photo" width="400"/>
+                </div>
+              </div>
+              {/* <h3>&#128368; {moment().format('MMMM Do YYYY, h:mm:ss a')}</h3> */}
+            </div>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/about-me" component={About} />

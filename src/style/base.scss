@@ -1,52 +1,20 @@
-
-
 body {
     margin: 0px;
     background-image: url('../../static/assets/images/portfolio-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: fixed;
+    font-family: 'Orbitron', sans-serif;
+    cursor: crosshair;
 }
 
-.app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.app h1 {
-    font-family: 'My Soul', sans-serif;
-    font-size: 4rem;
-    color: black;
-    filter: drop-shadow(1px 1px 7px #4444dd);
-    padding: 10px;
-}
-
-.app h1:hover {
-    filter: drop-shadow(1px 1px 7px red);
-    transition: 0.3s;
-}
-
-.app h1 em {
-    color: azure;
-    font-family: inherit;
-    letter-spacing: 0.75rem;
-    font-weight: 900;
-}
-
-.app h2 {
-    font-size: 2rem;
-    filter: drop-shadow(1px 1px 7px #4444dd);
-    padding-bottom: 10px;
-}
-
-.app h2:hover {
-    filter: drop-shadow(2px 2px 7px red);
-    transition: 0.3s;
-}
-
+// .app {
+//     margin-top: 2rem;
+//     display: grid;
+//     justify-items: center;
+//     justify-content: center;
+//     align-items: center;
+// }
 .app a {
     font-size: 2rem;
     text-decoration: none;
@@ -61,29 +29,25 @@ body {
     cursor: pointer;
 }
 
-img {
-    border-radius: 25px;
-    padding: 10px;
-    opacity: 95%;
-    filter: drop-shadow(1px 1px 7px #4444dd);
-}
-
-img:hover {
-    filter: drop-shadow(1px 1px 7px red);
-    opacity: 100%;
-    transition: 0.3s;
-}
-
 button {
     font-size: 2rem;
-    border-radius: 7px;
+    border-radius: 15px;
+    border-width: 3px;
     letter-spacing: 0.3px;
+    text-decoration: bold;
+    font-weight: 500;
     background-color: black;
     color: white;
+    padding: 10px;
+    margin: 20px;
 }
 
 button:hover {
-    filter: drop-shadow(1px 1px 3px red);
-    border-radius: 9px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+    border-width: 5px;
+    transition: 0.1s;
     cursor: pointer;
+    padding: 8px;
 }

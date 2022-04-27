@@ -1,0 +1,94 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // background-image: linear-gradient(to bottom, #000000, #121212, #1e1e1e, #2a2a2a, #363636, #363636, #363636, #363636, #2a2a2a, #1e1e1e, #121212, #000000);
+    // height: 5vh;
+    // width: 75vw;
+    // filter: drop-shadow(1px 1px 3px #4444dd);
+    padding: 10px 10px 0px 10px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 5px;
+}
+
+.navbar a:hover {
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:focus {
+    color: white;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+.name {
+    font-family: 'My Soul', sans-serif;
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 0.3px;
+    filter: drop-shadow(1px 1px 7px #4444dd);
+    padding: 10px 15px 0px 0px;
+}
+
+.name:hover {
+    filter: drop-shadow(1px 1px 5px red);
+    transition: 0.3s;
+}
+
+.heading {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: red;
+    filter: drop-shadow(1px 1px 5px #4444dd);
+    padding: 0px 3px 3px 0px;
+    margin: 0px 3px 3px 0px;
+}
+
+h2:hover {
+    color: #4444dd;
+    filter: drop-shadow(1px 1px 7px red);
+    transition: 0.3s ease-in-out;
+}
+
+.bio-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+img {
+    border-radius: 25px;
+    padding: 10px;
+    opacity: 95%;
+    width: 25vw;
+    filter: drop-shadow(1px 1px 7px #4444dd);
+}
+
+img:hover {
+    filter: drop-shadow(1px 1px 7px red);
+    opacity: 100%;
+    transition: 0.3s;
+}
