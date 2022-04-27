@@ -1,0 +1,89 @@
+
+
+body {
+    margin: 0px;
+    background-image: url('../../static/assets/images/portfolio-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+.app {
+    margin-top: 2rem;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.app h1 {
+    font-family: 'My Soul', sans-serif;
+    font-size: 4rem;
+    color: black;
+    filter: drop-shadow(1px 1px 7px #4444dd);
+    padding: 10px;
+}
+
+.app h1:hover {
+    filter: drop-shadow(1px 1px 7px red);
+    transition: 0.3s;
+}
+
+.app h1 em {
+    color: azure;
+    font-family: inherit;
+    letter-spacing: 0.75rem;
+    font-weight: 900;
+}
+
+.app h2 {
+    font-size: 2rem;
+    filter: drop-shadow(1px 1px 7px #4444dd);
+    padding-bottom: 10px;
+}
+
+.app h2:hover {
+    filter: drop-shadow(2px 2px 7px red);
+    transition: 0.3s;
+}
+
+.app a {
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.app a:hover {
+    text-decoration: bold;
+    color: red;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+img {
+    border-radius: 25px;
+    padding: 10px;
+    opacity: 95%;
+    filter: drop-shadow(1px 1px 7px #4444dd);
+}
+
+img:hover {
+    filter: drop-shadow(1px 1px 7px red);
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+button {
+    font-size: 2rem;
+    border-radius: 7px;
+    letter-spacing: 0.3px;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    filter: drop-shadow(1px 1px 3px red);
+    border-radius: 9px;
+    cursor: pointer;
+}
