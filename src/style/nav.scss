@@ -19,21 +19,25 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.5rem;
 }
 
 .navbar a {
     color: white;
-    padding: 5px;
+    text-decoration: none;
+    padding: 10px;
 }
 
 .navbar a:hover {
+    color: red;
     border-left: 2px solid red;
     border-right: 2px solid red;
+    letter-spacing: 2px;
     transition: 0.3s ease-in-out;
 }
 
 .navbar a:focus {
-    color: white;
+    color: darkred;
     border-top: 2px solid red;
     border-bottom: 2px solid red;
 }

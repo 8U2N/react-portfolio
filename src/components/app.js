@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from "moment";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavigationContainer from './navigation/navigation-container';
@@ -8,6 +7,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
 import PortfolioDetails from "./portfolio/portfolio-details";
+import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 
 export default class App extends Component {
@@ -17,21 +17,21 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="container">
         <Router>
           <div>
             <NavigationContainer />
             <div className="heading">
               <div className="bio-subheading">
                 <h2>Junior Full Stack Developer</h2>
-                <div className="bio-image">
+                {/* <div className="bio-image">
                   <img src="/assets/images/developer-photo.jpg" alt="profile-photo" width="400"/>
-                </div>
+                </div> */}
               </div>
-              {/* <h3>&#128368; {moment().format('MMMM Do YYYY, h:mm:ss a')}</h3> */}
             </div>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/auth" component={Auth} />
               <Route exact path="/about-me" component={About} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/blog" component={Blog} />

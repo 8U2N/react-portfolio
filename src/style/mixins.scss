@@ -1,0 +1,25 @@
+@mixin base-btn {
+    cursor: pointer;
+    height: 42px;
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.5s ease-in-out;
+    background-color: #4444dd;
+    color: white;
+    text-decoration: none;
+
+    &:active, &:focus {
+        color: darkred;
+        border-top: 2px solid red;
+        border-bottom: 2px solid red;
+    }
+
+    &:hover {
+        color: red;
+        border-left: 2px solid red;
+        border-right: 2px solid red;
+        letter-spacing: 2px;
+        transition: 0.3s ease-in-out;
+    }
+}

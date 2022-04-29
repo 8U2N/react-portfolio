@@ -8,6 +8,10 @@ body {
     cursor: crosshair;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 // .app {
 //     margin-top: 2rem;
 //     display: grid;
@@ -29,25 +33,3 @@ body {
     cursor: pointer;
 }
 
-button {
-    font-size: 2rem;
-    border-radius: 15px;
-    border-width: 3px;
-    letter-spacing: 0.3px;
-    text-decoration: bold;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    margin: 20px;
-}
-
-button:hover {
-    text-decoration: none;
-    letter-spacing: 0.3px;
-    font-weight: 300;
-    border-width: 5px;
-    transition: 0.1s;
-    cursor: pointer;
-    padding: 8px;
-}
