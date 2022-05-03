@@ -13,6 +13,7 @@
         color: darkred;
         border-top: 2px solid red;
         border-bottom: 2px solid red;
+        filter: brightness(50%);
     }
 
     &:hover {
@@ -21,5 +22,6 @@
         border-right: 2px solid red;
         letter-spacing: 2px;
         transition: 0.3s ease-in-out;
+        filter: brightness(75%);
     }
 }
