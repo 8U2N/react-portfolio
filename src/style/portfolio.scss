@@ -44,6 +44,7 @@
     .image-blur {
         transition: 1s;
         filter: brightness(10%);
+        transition: 1s ease-in-out;
     }
 
 }

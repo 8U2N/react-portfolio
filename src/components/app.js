@@ -58,11 +58,11 @@ export default class App extends Component {
 
       if (loggedIn && loggedInStatus === "LOGGED_IN") {
         return loggedIn;
-      } else if (loggedIN && loggedInStatus === "NOT_LOGGED_IN") {
+      } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
         this.setState({
           loggedInStatus: "LOGGED_IN"
         });
-      } else if (!loggedIN && loggedInStatus === "LOGGED_IN") {
+      } else if (!loggedIn && loggedInStatus === "LOGGED_IN") {
         this.setState({
           loggedInStatus: "NOT_LOGGED_IN"
         });
@@ -80,7 +80,7 @@ export default class App extends Component {
   authorizedPages() {
     return [
       <Route exact path="/portfolio-manager" component={PortfolioManager} />
-    ]
+    ];
   }
 
   render() {

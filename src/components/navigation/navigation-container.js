@@ -59,7 +59,7 @@ const NavigationComponent = (props) => {
 
                 <div className="name">
                     &#9876; Tyler Burnworth
-                    {props.loggedInStatus === "LOGGED_IN" ? <a onClick= {handleSignOut}>Sign Out</a> : null }
+                    {props.loggedInStatus === "LOGGED_IN" ? (<a onClick= {handleSignOut}>Sign Out</a>) : null }
                 </div>
             </div>
         );
