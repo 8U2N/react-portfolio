@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDumpsterFire } from "@fortawesome/free-solid-svg-icons";
+import { faEdit } from '@fortawesome/free-regular-svg-icons';
+
 const PortfolioSidebarList = (props) => {
     const portfolioList = props.data.map(portfolioItem => {
         return (
@@ -8,7 +12,13 @@ const PortfolioSidebarList = (props) => {
                     <img src={portfolioItem.thumb_image_url} />
                 </div>
                 <h1 className="title">{portfolioItem.name}</h1>
-                <h2>{portfolioItem.id}</h2>
+                <div className="action">
+                    <a onClick={() => props.handleEditClick(portfolioItem)}>
+                    <FontAwesomeIcon icon={faEdit} /></a>
+                    <a onClick={() => props.handleDeleteClick(portfolioItem)}>
+                    <FontAwesomeIcon icon={faDumpsterFire} />
+                    </a>
+                </div>
             </div>  
         );
     });

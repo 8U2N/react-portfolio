@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from "react-router";
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 const NavigationComponent = (props) => {
     const dynamicLink = (route, linkText) => {
@@ -59,7 +61,7 @@ const NavigationComponent = (props) => {
 
                 <div className="name">
                     &#9876; Tyler Burnworth
-                    {props.loggedInStatus === "LOGGED_IN" ? (<a onClick= {handleSignOut}>Sign Out</a>) : null }
+                    {props.loggedInStatus === "LOGGED_IN" ? (<a onClick= {handleSignOut}><FontAwesomeIcon icon={faSignOutAlt} /></a>) : null }
                 </div>
             </div>
         );

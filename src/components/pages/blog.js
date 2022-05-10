@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-export default function() {
-    return (
-    <div>
+class Blog extends Component {
+    constructor() {
+        super();
+    }
+
+    render() {
+        return (
         <div>
-       <h2>Blog</h2>
+            <div>
+        <h2>Blog</h2>
+            </div>
+            <div>
+                <Link to="/about-me">Read More About Myself</Link>
+            </div>
         </div>
-        <div>
-            <Link to="/about-me">Read More About Myself</Link>
-        </div>
-    </div>
-    );
+        );
+    }
 }
+
+export default Blog

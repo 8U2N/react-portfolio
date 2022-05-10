@@ -56,6 +56,17 @@
     transition: 0.3s;
 }
 
+.name a {
+    font-size: 0.5em;
+    color: #4444dd;
+    transition: 0.5s ease-in-out;
+    padding-left: 21px;
+
+    &:hover {
+        color: darkred;
+    }
+}
+
 .heading {
     display: flex;
     justify-content: flex-end;
