@@ -12,6 +12,7 @@ import PortfolioManager from "./pages/portfolio-manager";
 import PortfolioDetails from "./portfolio/portfolio-details";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
+import faSpinner from "@fortawesome/free-solid-svg-icons";
 
 export default class App extends Component {
   constructor(props) {
