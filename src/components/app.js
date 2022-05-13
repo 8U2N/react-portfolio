@@ -12,11 +12,13 @@ import PortfolioManager from "./pages/portfolio-manager";
 import PortfolioDetails from "./portfolio/portfolio-details";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
-import faSpinner from "@fortawesome/free-solid-svg-icons";
+import Icons from "../helpers/icons";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
+
+    Icons();
 
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN"
@@ -103,7 +105,7 @@ export default class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
 
-              <Route exact path="/auth"
+              <Route path="/auth"
                 render={props => (
                   <Auth
                     {...props}
@@ -113,12 +115,17 @@ export default class App extends Component {
                 )} 
               />
 
-              <Route exact path="/about-me" component={About} />
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="/blog" component={Blog} /> 
-              <Route exact path="/b/:slug" component={BlogDetail} /> 
+              <Route path="/about-me" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/blog"
+              render={props => (
+                  <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
+                )} 
+              />
+
+              <Route path="/b/:slug" component={BlogDetail} /> 
               {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null }
-              <Route exact path="/portfolio-manager" component={PortfolioManager} />
+              <Route path="/portfolio-manager" component={PortfolioManager} />
               <Route exact path="/portfolio/:slug" component={PortfolioDetails} />
               <Route component={NoMatch} />
             </Switch>

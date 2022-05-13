@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
+
 import BlogForm from "../pages/blog-form";
 
 ReactModal.setAppElement('.app-wrapper');

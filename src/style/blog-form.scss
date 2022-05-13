@@ -8,12 +8,12 @@
         margin-bottom: 0px;
     }
     .text-input-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:focus {
-            border-bottom: 2px solid darkred;
+        .blog-content {
+            height: 4em;
+            
+            &:focus {
+                border: 2px solid darkred;
+            }
         }
     }
 }

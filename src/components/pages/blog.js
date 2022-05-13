@@ -66,7 +66,8 @@ class Blog extends Component {
         this.setState({
             currentPage: this.state.currentPage + 1
         });
-        axios.get(`https://tylerburnworth.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`, { 
+        axios.get(`https://tylerburnworth.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`, 
+        { 
             withCredentials: true 
         }).then(response => {
             this.setState({
@@ -101,13 +102,17 @@ class Blog extends Component {
             handleModalClose={this.handleModalClose}
             modalIsOpen={this.state.blogModalIsOpen} />
 
+            {this.props.loggedInStatus === "LOGGED_IN" ? (
             <div className="new-blog-link">
                 <a onClick={this.handleNewBlogClick}><FontAwesomeIcon icon={faFileCirclePlus} /></a>
             </div>
+            ) : null }
+
             <div className="content-container">
                 <h2>Blog</h2>
                 <div>{blogRecords}</div>
             </div>
+
             {this.state.isLoading ? (
             <div className="content-loader">
                 <FontAwesomeIcon icon={faSpinner} spin />

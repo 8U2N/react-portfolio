@@ -91,19 +91,18 @@ h2:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
 
-
-img {
-    border-radius: 25px;
-    padding: 10px;
-    opacity: 95%;
-    width: 25vw;
-    filter: drop-shadow(1px 1px 7px #4444dd);
-}
-
-img:hover {
-    filter: drop-shadow(1px 1px 7px red);
-    opacity: 100%;
-    transition: 0.3s;
+    .img {
+        border-radius: 25px;
+        padding: 10px;
+        opacity: 95%;
+        width: 25vw;
+        filter: drop-shadow(1px 1px 7px #4444dd);
+    
+        &:hover {
+            filter: drop-shadow(1px 1px 7px red);
+            opacity: 100%;
+            transition: 0.3s;
+        }
+    }
 }
