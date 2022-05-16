@@ -268,10 +268,10 @@ export default class PortfolioForm extends Component {
                         <img src={this.state.banner_image_url} />
 
                         <div className="image-removal-link">
-                        <a onClick={() => this.deleteImage("banner_image")}> 
-                        Remove File 
-                        </a>
-                    </div>
+                            <a onClick={() => this.deleteImage("banner_image")}> 
+                                Remove File 
+                            </a>
+                        </div>
                     </div>
                     :
                 <DropzoneComponent

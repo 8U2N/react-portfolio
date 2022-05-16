@@ -21,4 +21,8 @@
         @include base-grid();
         grid-template-columns: 200px;
     }
+
+    .image-removal-link {
+        color: white;
+    }
 }
