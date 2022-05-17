@@ -1,35 +1,28 @@
 body {
-    margin: 0px;
-    background-image: url('../../static/assets/images/portfolio-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: fixed;
-    font-family: 'Orbitron', sans-serif;
-    cursor: crosshair;
+  margin: 0px;
+  background-image: url("../../static/assets/images/portfolio-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  font-family: "Orbitron", sans-serif;
+  cursor: crosshair;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
-// .app {
-//     margin-top: 2rem;
-//     display: grid;
-//     justify-items: center;
-//     justify-content: center;
-//     align-items: center;
-// }
+
 .app a {
-    font-size: 2rem;
-    text-decoration: none;
-    letter-spacing: 0.3px;
+  font-size: 2rem;
+  text-decoration: none;
+  letter-spacing: 0.3px;
 }
 
 .app a:hover {
-    text-decoration: bold;
-    color: red;
-    letter-spacing: 2px;
-    transition: 0.5s;
-    cursor: pointer;
+  text-decoration: bold;
+  color: red;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  cursor: pointer;
 }
-
