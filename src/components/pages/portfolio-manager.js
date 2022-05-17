@@ -1,104 +1,111 @@
-import React, { Component } from 'react'
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
-import PortfolioSidebarList from '../portfolio/portfolio-sidebar-list';
+import PortfolioSidebarList from "../portfolio/portfolio-sidebar-list";
 import PortfolioForm from "../portfolio/portfolio-form";
 
 export default class PortfolioManager extends Component {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.state = {
-            portfolioItems: [],
-            portfolioToEdit: {}
-        };
+    this.state = {
+      portfolioItems: [],
+      portfolioToEdit: {},
+    };
 
-        this.handleNewFormSubmission = this.handleNewFormSubmission.bind(this);
-        this.handleEditFormSubmission = this.handleEditFormSubmission.bind(this);
-        this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
-        this.handleDeleteClick = this.handleDeleteClick.bind(this);
-        this.handleEditClick = this.handleEditClick.bind(this);
-        this.clearPortfolioToEdit = this.clearPortfolioToEdit.bind(this);
-    }
+    this.handleNewFormSubmission = this.handleNewFormSubmission.bind(this);
+    this.handleEditFormSubmission = this.handleEditFormSubmission.bind(this);
+    this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    this.handleEditClick = this.handleEditClick.bind(this);
+    this.clearPortfolioToEdit = this.clearPortfolioToEdit.bind(this);
+  }
 
-    clearPortfolioToEdit() {
-        this.setState({
-            portfolioToEdit: {}
-        })
-    }
-    handleEditClick(portfolioItem) {
-        this.setState({
-            portfolioToEdit: portfolioItem
-        })
-    }
+  clearPortfolioToEdit() {
+    this.setState({
+      portfolioToEdit: {},
+    });
+  }
+  handleEditClick(portfolioItem) {
+    this.setState({
+      portfolioToEdit: portfolioItem,
+    });
+  }
 
-    handleDeleteClick(portfolioItem) {
-        axios.delete(`https://api.devcamp.space/portfolio/portfolio_items/${portfolioItem.id}`, 
+  handleDeleteClick(portfolioItem) {
+    axios
+      .delete(
+        `https://api.devcamp.space/portfolio/portfolio_items/${portfolioItem.id}`,
         { withCredentials: true }
-        ).then(response => {
-            this.setState({
-                portfolioItems: this.state.portfolioItems.filter(item => {
-                    return item.id !== portfolioItem.id;
-                })
-            })
-
-            return response.data;
-        })
-        .catch(error => {
-            console.log("handleDeleteClick error", error);
-        })
-    }
-
-    handleEditFormSubmission() {
-        this.getPortfiolioItems();
-    }
-
-    handleNewFormSubmission(portfolioItem) {
+      )
+      .then((response) => {
         this.setState({
-            portfolioItems: [portfolioItem].concat(this.state.portfolioItems)
+          portfolioItems: this.state.portfolioItems.filter((item) => {
+            return item.id !== portfolioItem.id;
+          }),
         });
-    }
 
-    handleFormSubmissionError(error) {
-        console.log("handleFormSubmissionError error", error);
-    }
+        return response.data;
+      })
+      .catch((error) => {
+        console.log("handleDeleteClick error", error);
+      });
+  }
 
-    getPortfiolioItems() {
-        axios.get("https://tylerburnworth.devcamp.space/portfolio/portfolio_items", { 
-            withCredentials: true 
-        }).then(response => {
-            this.setState({
-                portfolioItems: [...response.data.portfolio_items]
-            })
-        }).catch(error => {
-            console.log("error in getPortfolioItems", error);
-        })
-    }
+  handleEditFormSubmission() {
+    this.getPortfiolioItems();
+  }
 
-    componentDidMount() {
-        this.getPortfiolioItems();
-    }
-    
-    render() {
-        return (
-            <div className="manager-container">
-                <div className="left-side">
-                    <PortfolioForm 
-                        handleNewFormSubmission={this.handleNewFormSubmission}
-                        handleEditFormSubmission={this.handleEditFormSubmission}
-                        handleFormSubmissionError={this.handleFormSubmissionError}
-                        clearPortfolioToEdit={this.clearPortfolioToEdit}
-                        portfolioToEdit={this.state.portfolioToEdit}
-                    />
-                </div>
+  handleNewFormSubmission(portfolioItem) {
+    this.setState({
+      portfolioItems: [portfolioItem].concat(this.state.portfolioItems),
+    });
+  }
 
-                <div className="right-side">
-                    <PortfolioSidebarList 
-                    handleDeleteClick={this.handleDeleteClick} 
-                    data={this.state.portfolioItems} 
-                    handleEditClick={this.handleEditClick}/>
-                </div>
-            </div>
-        );
-    }
+  handleFormSubmissionError(error) {
+    console.log("handleFormSubmissionError error", error);
+  }
+
+  getPortfiolioItems() {
+    axios
+      .get("https://tylerburnworth.devcamp.space/portfolio/portfolio_items", {
+        withCredentials: true,
+      })
+      .then((response) => {
+        this.setState({
+          portfolioItems: [...response.data.portfolio_items],
+        });
+      })
+      .catch((error) => {
+        console.log("error in getPortfolioItems", error);
+      });
+  }
+
+  componentDidMount() {
+    this.getPortfiolioItems();
+  }
+
+  render() {
+    return (
+      <div className="manager-container">
+        <div className="left-side">
+          <PortfolioForm
+            handleNewFormSubmission={this.handleNewFormSubmission}
+            handleEditFormSubmission={this.handleEditFormSubmission}
+            handleFormSubmissionError={this.handleFormSubmissionError}
+            clearPortfolioToEdit={this.clearPortfolioToEdit}
+            portfolioToEdit={this.state.portfolioToEdit}
+          />
+        </div>
+
+        <div className="right-side">
+          <PortfolioSidebarList
+            handleDeleteClick={this.handleDeleteClick}
+            data={this.state.portfolioItems}
+            handleEditClick={this.handleEditClick}
+          />
+        </div>
+      </div>
+    );
+  }
 }

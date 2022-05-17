@@ -1,0 +1,16 @@
+.homepage-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .filter-links {
+    .button-board {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 10px;
+    }
+    .btn {
+      @include base-btn;
+      width: 100%;
+    }
+  }
+}
