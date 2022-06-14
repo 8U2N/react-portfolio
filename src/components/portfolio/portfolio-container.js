@@ -28,6 +28,7 @@ export default class PortfolioContainer extends Component {
       .get("https://tylerburnworth.devcamp.space/portfolio/portfolio_items")
       // handle success
       .then((response) => {
+        console.log(response);
         if (filter) {
           this.setState({
             data: response.data.portfolio_items.filter((item) => {

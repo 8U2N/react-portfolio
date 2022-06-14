@@ -83,6 +83,7 @@ export default class Login extends Component {
               type="password"
               name="password"
               placeholder="Your password"
+              secureTextEntry={true}
               value={this.state.password}
               onChange={this.handleChange}
             />
