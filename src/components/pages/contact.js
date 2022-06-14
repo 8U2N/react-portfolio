@@ -27,45 +27,60 @@ export default function () {
       <div className="right-column">
         <div className="contact-bullet-points">
           <div className="bullet-point-group">
-            <div className="text">419 707-4439</div>
             <div className="icon">
               <FontAwesomeIcon icon={faPhoneSquare} />
+              419 707-4439
             </div>
           </div>
-        </div>
-        <div className="text">Email</div>
-        <div className="bullet-point-group">
-          <div className="icon">
-            <FontAwesomeIcon icon={faEnvelopeSquare} />
+
+          <div className="bullet-point-group">
+            <a href="mailto: 8u2n@protonmail.com" target="_blank">
+              <div className="icon">
+                <FontAwesomeIcon icon={faEnvelopeSquare} />
+                Email
+              </div>
+            </a>
           </div>
-        </div>
-        <div className="text">Las Vegas, NV</div>
-        <div className="bullet-point-group">
-          <div className="icon">
-            <FontAwesomeIcon icon={faMapMarkedAlt} />
+
+          <div className="bullet-point-group">
+            <div className="icon">
+              <FontAwesomeIcon icon={faMapMarkedAlt} />
+              Las Vegas, NV
+            </div>
           </div>
-          <div className="text"></div>
-        </div>
-        <div className="text"></div>
-        <div className="bullet-point-group">
-          <div className="icon">
-            <FontAwesomeIcon icon={faFacebookSquare} />
+
+          <div className="bullet-point-group">
+            <a
+              href="https://www.facebook.com/tyler.burnworth.39"
+              target="_blank"
+            >
+              <div className="icon">
+                <FontAwesomeIcon icon={faFacebookSquare} />
+                Facebook
+              </div>
+            </a>
           </div>
-          <div className="text">Las Vegas, NV</div>
-        </div>
-        <div className="text"></div>
-        <div className="bullet-point-group">
-          <div className="icon">
-            <FontAwesomeIcon icon={faTwitterSquare} />
+
+          <div className="bullet-point-group">
+            <a href="https://twitter.com/tylerwriting" target="_blank">
+              <div className="icon">
+                <FontAwesomeIcon icon={faTwitterSquare} />
+                Twitter
+              </div>
+            </a>
           </div>
-          <div className="text"></div>
-        </div>
-        <div className="text"></div>
-        <div className="bullet-point-group">
-          <div className="icon">
-            <FontAwesomeIcon icon={faLinkedin} />
+
+          <div className="bullet-point-group">
+            <a
+              href="https://www.linkedin.com/in/tyler-e-c-burnworth-142504100/"
+              target="_blank"
+            >
+              <div className="icon">
+                <FontAwesomeIcon icon={faLinkedin} />
+                LinkedIn
+              </div>
+            </a>
           </div>
-          <div className="text"></div>
         </div>
       </div>
     </div>
